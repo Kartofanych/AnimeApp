@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="40dp"
+    android:background="@color/backgroundSecond">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_alert"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginVertical="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="40dp"
+        app:cardCornerRadius="10dp">
+        <EditText
+            android:id="@+id/alert_txt"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            style="@style/TextTitles"
+            android:textColor="@color/background"
+            android:textColorHint="@color/backgroundSecond"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:background="@color/background_another"
+            android:hint="Tap your post..."
+            android:gravity="bottom"
+            />
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:id="@+id/adds_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_alert"
+        android:orientation="vertical">
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="40dp"
+        app:cardCornerRadius="10dp"
+        android:layout_below="@+id/card_alert">
+        <TextView
+            android:id="@+id/alert_post"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            style="@style/TextTitles"
+            android:paddingHorizontal="20dp"
+            android:textColor="@color/background"
+            android:background="@color/background_another"
+            android:text="Post"
+            />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

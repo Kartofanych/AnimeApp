@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Anime" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:animateOnClick">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="TextTitles" parent="TextAppearance.AppCompat">
+        <item name="color">@color/titles</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/brandon_grotesque_medium</item>
+    </style>
+
+    <style name="BackPrimary">
+        <item name="backgroundColor">@color/light_grey</item>
+    </style>
+
+    <style name="Theme.Anime.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Anime.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style parent="ThemeOverlay.AppCompat.Dialog.Alert" name="TrackSelectionDialogThemeOverlay" >
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTitleBackgroundStyle">@color/background</item>
+        <item name="android:textColor">@color/titles</item>
+        <item name="android:backgroundTint">@color/background</item>
+
+    </style>
+
+    <style name="Theme.Anime.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="lighter_black">#202022</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_grey">#F2F4F6</color>
+    <color name="grey">#8D7A7A7A</color>
+    <color name="hard_grey">#202022</color>
+    <color name="harder_grey">#515159</color>
+
+    <color name="titles">#FFFFFFFF</color>
+    <color name="background">#121212</color>
+    <color name="backgroundSecond">#202022</color>
+    <color name="background_another">#F2F4F6</color>
+    <color name="red">#E24248</color>
+    <color name="green">#71BB76</color>
+    <color name="purple">#B467B9</color>
+    <color name="star">#FFCC47</color>
+
+</resources>

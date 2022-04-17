@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlogActivity">
+
+    <ScrollView
+        android:id="@+id/scrollBlog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroundSecond"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/design_night_modexxxhdpi"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:elevation="20dp"
+                app:layout_constraintWidth_percent="1"
+                android:backgroundTint="@color/background"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/info_holder"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintWidth_percent="1"
+                android:elevation="40dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/profile_img_holder"
+
+                    android:layout_alignParentStart="true"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:cardCornerRadius="100dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/profile_img"
+                        android:transitionName="profile_img_trans"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/zxcursed"
+                        />
+                </androidx.cardview.widget.CardView>
+                <RelativeLayout
+                    android:id="@+id/info_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="10dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_img_holder"
+                    app:layout_constraintHeight_percent="0.2"
+
+                    >
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_above="@+id/status"
+                        android:layout_width="wrap_content"
+                        android:transitionName="profile_name_trans"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/brandon_grotesque_medium_italic"
+                        android:textColor="@color/titles"
+                        android:textSize="17dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="ZXCURSED"
+                        />
+                    <TextView
+                        android:id="@+id/status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/titles"
+                        android:fontFamily="@font/brandon_grotesque_regular_italic"
+                        android:textSize="15dp"
+                        android:layout_centerHorizontal="true"
+                        android:transitionName="profile_about_trans"
+                        android:text="228 titles"
+                        android:layout_alignParentBottom="true"
+                        />
+                </RelativeLayout>
+                <View
+                    android:id="@+id/v"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginHorizontal="20dp"
+                    app:layout_constraintVertical_bias="0.95"
+                    android:background="@color/grey"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/kol_holder"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_below="@+id/info_holder"
+            app:layout_constraintWidth_percent="1">
+            <RelativeLayout
+                android:id="@+id/rell_count"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHeight_percent="0.6"
+                app:layout_constraintWidth_percent="0.8">
+                <RelativeLayout
+                    android:id="@+id/posts_count_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:id="@+id/posts_count"
+                        style="@style/TextTitles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="150"
+                        android:textColor="@color/titles"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        style="@style/TextTitles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/posts_count"
+                        android:text="posts"
+                        android:textColor="@color/titles"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+                <View
+                    android:id="@+id/vr"
+                    android:layout_width="0.2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:layout_toRightOf="@+id/posts_count_holder"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginVertical="10dp"/>
+                <RelativeLayout
+                    android:id="@+id/anime_count_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toStartOf="@+id/vl">
+
+                    <TextView
+                        android:id="@+id/anime_count"
+                        style="@style/TextTitles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="23"
+                        android:textColor="@color/titles"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        style="@style/TextTitles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/anime_count"
+                        android:text="anime"
+                        android:textColor="@color/titles"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+                <View
+                    android:id="@+id/vl"
+                    android:layout_width="0.2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:layout_toStartOf="@+id/posts_count_holder"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginVertical="10dp"/>
+                <RelativeLayout
+                    android:id="@+id/manga_count_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@+id/vr">
+
+                    <TextView
+                        android:id="@+id/manga_count"
+                        style="@style/TextTitles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="9"
+                        android:textColor="@color/titles"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        style="@style/TextTitles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/manga_count"
+                        android:text="manga"
+                        android:textColor="@color/titles"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rell_count"
+                app:layout_constraintWidth_percent="0.8">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:backgroundTint="@color/background"
+                    app:cardCornerRadius="15dp">
+                    <RelativeLayout
+                        android:id="@+id/createPost"
+                        android:layout_width="160dp"
+                        android:background="@color/background"
+                        android:layout_height="50dp"
+                        >
+                        <ImageView
+                            android:id="@+id/imggg"
+                            android:layout_width="33dp"
+                            android:layout_height="33dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/create_blog_item_png"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_alignParentLeft="true"
+                            android:tint="@color/background_another"/>
+                        <TextView
+                            android:id="@+id/crpost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Create post"
+                            android:layout_marginHorizontal="20dp"
+                            style="@style/TextTitles"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:textSize="18dp"
+                            android:textColor="@color/background_another"
+                            />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/kol_holder"
+                android:background="@drawable/rounded_bottom_sheet"
+                android:backgroundTint="@color/background"
+                android:id="@+id/rrr"
+                android:visibility="gone"
+
+                />
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/tab_layout"
+                android:layout_below="@id/kol_holder"
+
+                app:tabSelectedTextColor="@color/background_another"
+                app:tabIndicatorColor="@color/background_another"
+                app:tabMode="fixed"
+                android:background="@drawable/rounded_bottom_sheet"
+                app:tabIndicatorAnimationMode="elastic">
+                <com.google.android.material.tabs.TabItem
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout="@layout/tab_item_blog"
+                    android:layout_gravity="start"
+
+                    />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout="@layout/tab_item_review"
+                    android:layout_gravity="end"
+
+                    />
+
+
+            </com.google.android.material.tabs.TabLayout>
+
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                android:layout_below="@+id/tab_layout" />
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+    <include layout="@layout/bottom_sheet_blog_comments"
+        />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

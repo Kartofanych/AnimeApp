@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Anime" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/light_grey</item>
+        <item name="android:animateOnClick">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+    <style name="TextTitles" parent="TextAppearance.AppCompat">
+        <item name="color">@color/titles</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/brandon_grotesque_medium</item>
+    </style>
+
+    <style name="BackPrimary">
+        <item name="backgroundColor">@color/light_grey</item>
+    </style>
+
+    <style name="Theme.Anime.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Anime.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Anime.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

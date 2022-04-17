@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_account">
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.example.anime.ui.account.AccountFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_account" />
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.anime.ui.search.SearchFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/navigation_forum"
+        android:name="com.example.anime.ui.forum.ForumFragment"
+        android:label="Downloads"
+        tools:layout="@layout/fragment_forum" />
+</navigation>
